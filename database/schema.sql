@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS employee_db
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE employee_db;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    employee_id VARCHAR(20) NOT NULL UNIQUE,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    phone VARCHAR(10) NOT NULL UNIQUE,
+    department VARCHAR(80) NOT NULL,
+    designation VARCHAR(100) NOT NULL,
+    joining_date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
