@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS employees (
+    id SERIAL PRIMARY KEY,
+    employee_id VARCHAR(20) NOT NULL UNIQUE,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    phone VARCHAR(10) NOT NULL UNIQUE,
+    department VARCHAR(80) NOT NULL,
+    designation VARCHAR(100) NOT NULL,
+    joining_date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
